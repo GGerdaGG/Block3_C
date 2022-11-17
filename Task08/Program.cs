@@ -3,3 +3,39 @@
 
 // 5 -> 2, 4  
 // 8 -> 2, 4, 6, 8
+
+Console.WriteLine("Введите число: ");
+int n = Convert.ToInt32(Console.ReadLine());
+int count = 1;
+while (n >= count)
+{
+    if (n % 2 == 0)
+    {
+        Console.Write(n + " ");  //выводим через пробел
+    }
+    else
+    {
+        Console.Write(" "); //выводим пустоту
+    }
+    n--;
+}
+
+// Console.WriteLine("Введите число: ");
+// int n = Convert.ToInt32(Console.ReadLine());
+// int count = 1;
+// while (count <= n)
+// {
+//     if (count % 2 == 0)
+//     {
+//         Console.Write(count + ","); // выводим через запятую
+//     }
+//     else
+//     {
+//         Console.Write(" "); //выводим пустоту
+//     }
+//     count++;
+// }
+
+
+
+
