@@ -25,3 +25,5 @@ else Console.WriteLine("Не правильное число");
 // else if(number == "6") Console.WriteLine("Суббота");
 // else if(number == "7") Console.WriteLine("Воскресенье");
 // else Console.WriteLine("Не правильное число");
+
+//

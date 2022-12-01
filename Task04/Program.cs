@@ -15,4 +15,4 @@ int result = num1;
 if(num2>result) result=num2;
 if(num3>result) result=num3;
 Console.WriteLine($"Максимальное число из трех чисел: {result}");
-
+//
