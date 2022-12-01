@@ -10,13 +10,17 @@
 
 Console.WriteLine("Введите пятизначное число: ");
 int number = Convert.ToInt32(Console.ReadLine());
+if (number >= 10000 && number <= 99999)
+    Console.WriteLine(Metod(number) ? "Да, палиндром" : "Нет, не палиндром");
+else
+    Console.WriteLine("Введено не пятизначное число");
 
 bool Metod(int num)
 {
-return ((num / 10000 == num % 10) && (num/10%10 == num/1000%10));
+    return ((num / 10000 == num % 10) && (num / 10 % 10 == num / 1000 % 10));
 }
 
-Console.WriteLine( Metod(number) ? "Да, палиндром" : "Нет, не палиндром");
+
 
 
 // Console.WriteLine("Введите пятизначное число: ");
