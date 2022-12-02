@@ -71,46 +71,74 @@ Console.WriteLine($"Сумма отрицательных чисел = {sumNegat
 // // положительных чисел равна 29, сумма отрицательных равна
 // // -20.
 
-int[] CreateArrayRandomInt (int size, int min, int max)
+//создание м ассива, заполняем массив числами из диапозона
+int[] CreateArrayRandomInt (int size, int min, int max) //в скобках размер массива, диапозон числел мин и макс
 {
-    int [] array = new int [size];
-    Random rndm = new Random();
+    int [] array = new int [size]; //это мы создали сам массив с размером сайз, нью означает что мы выделяем память для этого массива
+    Random rndm = new Random(); //это рандомные числа в массиве
     
-    for(int index = 0; index < array.Length; index = index + 1)
+    for(int index = 0; index < array.Length; index = index + 1) //счетчик хорошо подходит для передока индексов в массиве
     {
-        array[index] = rndm.Next( min, max+1 );// с учетом последнего индекса поэтому + 1
+        array[index] = rndm.Next( min, max+1 );// массив с индексом = с учетом последнего индекса поэтому + 1
     }
     return array;
 }
 
-void PrintArray (int [] array) // тут пишем аргумент получения массива из предедущего метода
+//метод который будет выводить в консоль, в нужной нам форме [ , , , ]
+// тип войд означает что метод не возвращает никакое значение
+void PrintArray (int [] arr) // тут пишем аргумент получения массива из предедущего метода
 {
-    Console.Write("[");
-    for(int index = 0; index < array.Length; index = index + 1)
+    Console.Write("[");//открывающая скобка для вывода
+    for(int index = 0; index < arr.Length; index = index + 1)
     {
-        if (index < array.Length - 1) Console.Write($"{array[index]}, ");
-        else Console.Write($"{array[index]}");
+        if (index < arr.Length - 1) Console.Write($"{arr[index]}, ");//выводим все числа кроме последнего с запятой
+        else Console.Write($"{arr[index]}");
     }
-    Console.WriteLine("]");
+    Console.WriteLine("]");//закрывающая скобка для вывода
 }
 
-int GetSumNegativElem (int [] array)
+// Сумма отрицательных элементов
+
+// int SumNegativeElemsArray(int[] arr)
+// {
+//     int sumNegative1 = 0;
+//     for (int i = 0; i < arr.Length; i++)
+//     {
+//         if (arr[i] < 0) sumNegative1 += arr[i]; // или if (arr[i] < 0 ) sumNegative1 = sumNegative1 + arr[i];
+//     }
+//     return sumNegative1;
+// }
+
+// Сумма отрицательных элементов второй вариант
+int GetSumNegativElem (int [] arr)
 {
     int sum = default;
-    for ( int index = 0; index < array.Length; index = index + 1 )
+    for ( int index = 0; index < arr.Length; index = index + 1 )
     {
-        if (array[index] < 0 ) sum = sum + array[index] ;// sumNegative += arr[index] можно так написать
+        if (arr[index] < 0 ) sum = sum + arr[index] ;// sumNegative += arr[index] можно так написать
     
     }
     return sum;
 }
 
-int GetSumPositiveElem (int [] array)
+//Сумма положительных элементов 
+// int SumPositiveElemsArray(int[] arr)
+// {
+//     int sumPositive1 = 0;
+//     for (int i = 0; i < arr.Length; i++)
+//     {
+//         if (arr[i] > 0) sumPositive1 += arr[i];
+//     }
+//     return sumPositive1;
+// }
+
+//Сумма положительных элементов второй вариант
+int GetSumPositiveElem (int [] arr)
 {
     int sum = default;
-    for ( int index = 0; index < array.Length; index = index + 1 )
+    for ( int index = 0; index < arr.Length; index = index + 1 )
     {
-        if (array[index] > 0 ) sum = sum + array[index] ;// sumNegative += arr[index] можно так написать
+        if (arr[index] > 0 ) sum = sum + arr[index] ;// sumNegative += arr[index] можно так написать
     
     }
     return sum;
