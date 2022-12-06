@@ -58,7 +58,7 @@ double MaxDigit(double[] arr)
 double minDigit = MinDigit(array);
 double maxDigit = MaxDigit(array);
 Console.WriteLine($"Минимальное и максимальное число: {minDigit}, {maxDigit}");
-Console.WriteLine($"Разница между ними  = {maxDigit - minDigit}");
+Console.WriteLine($"Разница между ними  = {Math.Round((maxDigit - minDigit),2)}");
 
 
 //С целыми числами
