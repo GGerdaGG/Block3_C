@@ -15,16 +15,16 @@ double k2 = Convert.ToInt32(Console.ReadLine());
 
 double DotX (double ab1, double ak1, double ab2, double ak2)
 {
-    double X = 0;
-    X = (ab2-ab1)/(ak1-ak2);
-    return X;
+    double x = 0;
+    x = (ab2-ab1)/(ak1-ak2);
+    return x;
 }
 
 double DotY (double ab1, double ak1, double ab2, double ak2)
 {
-    double Y = 0;
-    Y = ak1 * ((ab2-ab1)/(ak1-ak2)) + ab1;
-    return Y;
+    double y = 0;
+    y = ak1 * ((ab2-ab1)/(ak1-ak2)) + ab1;
+    return y;
 }
 
 double dotX = DotX (b1, k1, b2, k2);
