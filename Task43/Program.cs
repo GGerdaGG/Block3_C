@@ -29,4 +29,7 @@ double DotY (double ab1, double ak1, double ab2, double ak2)
 
 double dotX = DotX (b1, k1, b2, k2);
 double dotY = DotY (b1, k1, b2, k2);
+
 Console.Write($"Точка пересечения: ({Math.Round(dotX,2)},{Math.Round(dotY,2)})");
+
+
