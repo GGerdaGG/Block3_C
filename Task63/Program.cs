@@ -1,2 +1,17 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿// Задача 63: Задайте значение N. Напишите программу, которая выведет
+// все натуральные числа в промежутке от 1 до N.
+// N = 5 -> "1, 2, 3, 4, 5"
+// N = 6 -> "1, 2, 3, 4, 5, 6"
+
+Console.WriteLine("Введите натуральное число: ");
+int number = Convert.ToInt32(Console.ReadLine());
+NaturalNumbers(number);
+
+void NaturalNumbers (int num)
+{
+    if (num == 0) return; //когда num дойдет до нуля возвращаем. Поэтому идет в обратном порядке
+    NaturalNumbers (num - 1); // 6-1=5 и тд 5 4 3 2 1
+    Console.Write($"{num} "); //эта строка ниже, чтобы шло по порядку.  1 2 3 4 5
+}
+
+//в рекурсии все операции идут по порядку (12,13,10), но при выходе срабатывают те которые еще не были выполнены (14)
